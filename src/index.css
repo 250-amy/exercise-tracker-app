@@ -40,8 +40,7 @@
     margin: 0;
     display: flex;
     min-width: 220px;
-    min-height: 100vh;
-    background-color: rgba(213, 203, 186, 0.211);
+    height: 100vh;
   }
   
   .title {
@@ -74,6 +73,7 @@
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
+    
   }
   
   .input-label {
@@ -97,7 +97,7 @@
   @media (prefers-color-scheme: light) {
     :root {
       color: #213547;
-      background-color: #ffffff;
+      background-color: #fcfbfa;
     }
     a:hover {
       color: #747bff;
