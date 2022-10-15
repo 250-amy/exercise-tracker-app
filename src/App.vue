@@ -77,7 +77,7 @@ onMounted(() => {
                 type="text"
                 id="content"
                 class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                placeholder="e.g. jump squats"
+                placeholder="e.g. shoulder press"
                 v-model="input_content"
                 required
               />
@@ -164,8 +164,7 @@ onMounted(() => {
     <section class="exercise_list mt-8 w-auto">
       <h2 class="subtitle text-left font-medium">Exercise List</h2>
       <p class="mb-4 flex text-sm text-left content-start w-auto">
-        These fields are editable. You can change the information that you have
-        submitted at any time.
+        Your inputted exercises will appear here. You can edit the information at any time; just click on the text that you want to change. 
       </p>
 
       <div class="list lg:w-auto sm:min-w-fit" id="exercise_list">
