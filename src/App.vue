@@ -168,7 +168,7 @@ onMounted(() => {
         submitted at any time.
       </p>
 
-      <div class="list w-auto" id="exercise_list">
+      <div class="list lg:w-auto sm:min-w-fit" id="exercise_list">
         <div
           v-for="exercise in exercises_asc"
           v-bind:key="exercise.id"
