@@ -58,7 +58,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="app bg-gray-800 shadow-xl rounded-2xl px-12 py-8 sm:px-32 lg:px-64">
+  <main class="app bg-gray-800 shadow-xl rounded-2xl px-8 py-6 sm:px-32 lg:px-64">
     <section class="greeting mb-6">
       <h1 class="title font-bold uppercase tracking-wide mb-1">Exercise Tracker</h1>
       <p class="text-sm">Lift weights, log, repeat 💪</p>
@@ -166,7 +166,7 @@ onMounted(() => {
         Your inputted exercises will appear here. You can edit the information at any time; just click on the text that you want to change. 
       </p>
     <div class="flex justify-center">
-      <div class="list w-9/12 sm:w-full" id="exercise_list">
+      <div class="w-9/12 sm:w-full" id="exercise_list">
         <div
           v-for="exercise in exercises_asc"
           v-bind:key="exercise.id"
