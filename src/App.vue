@@ -58,9 +58,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="app">
-    <section class="greeting">
-      <h1 class="title mb-4">Exercise Tracker</h1>
+  <main class="app bg-gray-800 shadow-xl rounded-2xl px-12 py-8 sm:px-32 lg:px-64">
+    <section class="greeting mb-6">
+      <h1 class="title font-bold uppercase tracking-wide mb-1">Exercise Tracker</h1>
+      <p class="text-sm">Lift weights, log, repeat 💪</p>
     </section>
 
     <div id="form">
@@ -76,7 +77,7 @@ onMounted(() => {
               <input
                 type="text"
                 id="content"
-                class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                 placeholder="e.g. shoulder press"
                 v-model="input_content"
                 required
@@ -88,7 +89,7 @@ onMounted(() => {
               <p class="input-label flex content-start"># of sets:</p>
               <input
                 type="number"
-                class="rounded-lg border-transparent mr-2 flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                class="rounded-lg border-transparent mr-2 flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                 placeholder="0"
                 name="sets"
                 id="sets"
@@ -100,7 +101,7 @@ onMounted(() => {
               <p class="input-label flex content-start"># of reps:</p>
               <input
                 type="number"
-                class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                 name="reps"
                 placeholder="0"
                 id="reps"
@@ -114,7 +115,7 @@ onMounted(() => {
             <div class="w-full text-left mr-3">
               <input
                 type="number"
-                class="rounded-lg border-transparent flex-1 inline appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                class="rounded-lg border-transparent flex-1 inline appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                 name="weight"
                 placeholder="0"
                 id="weight"
@@ -150,7 +151,7 @@ onMounted(() => {
           <div class="flex w-full my-4">
             <button
               type="submit"
-              class="uppercase py-2 px-4 bg-purple-600 hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+              class="uppercase py-2 px-4 bg-gradient-to-br from-pink-500 to-orange-400 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 transition-opacity duration-1000 ease-out opacity-100 hover:opacity-75 text-white tracking-wide w-full text-center text-base font-bold shadow-md rounded-lg"
             >
               Add Exercise
             </button>
@@ -164,8 +165,8 @@ onMounted(() => {
       <p class="mb-4 flex text-sm text-left content-start w-auto">
         Your inputted exercises will appear here. You can edit the information at any time; just click on the text that you want to change. 
       </p>
-
-      <div class="list lg:w-auto sm:min-w-fit" id="exercise_list">
+    <div class="flex justify-center">
+      <div class="list w-9/12 sm:w-full" id="exercise_list">
         <div
           v-for="exercise in exercises_asc"
           v-bind:key="exercise.id"
@@ -179,7 +180,7 @@ onMounted(() => {
               >
                 <input
                   type="text"
-                  class="font-semibold text-xl uppercase bg-transparent mx-3 pb-3"
+                  class="font-semibold text-xl text-gray-800 uppercase tracking-wide bg-transparent mx-3 pb-3"
                   v-model="exercise.content"
                 />
                 <div
@@ -218,12 +219,13 @@ onMounted(() => {
 
                 <div class="actions">
                   <button
-                    class="delete uppercase py-2 px-4 mt-4 w-36 bg-purple-600 hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                    class="delete uppercase py-2 px-4 mt-4 w-1/2 bg-gradient-to-br from-pink-500 to-orange-400 focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 transition-opacity duration-1000 ease-out opacity-100 hover:opacity-75 text-white text-center text-base font-bold tracking-wide shadow-md rounded-lg"
                     @click="removeExercise(exercise)"
                   >
                     Delete
                   </button>
                 </div>
+                </div>//
               </div>
             </div>
           </div>
