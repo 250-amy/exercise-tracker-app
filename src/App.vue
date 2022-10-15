@@ -122,8 +122,8 @@ onMounted(() => {
                 required
               />
             </div>
-            <span class="flex items-center pl-2 w-1/3 flex-row">
-              <label>
+            <span class="flex items-center pl-2 w-1/3">
+              <label class="text-justify">
                 <input
                   type="radio"
                   name="category"
@@ -131,11 +131,10 @@ onMounted(() => {
                   value="lb"
                   v-model="weight_choice"
                 />
-                <span class="bubble personal"></span>
-                <span class="ml-1 mr-6">lb</span>
+                <span class="ml-1 mr-1 sm:ml-1 sm:mr-6">lb</span>
               </label>
 
-              <label>
+              <label class="text-justify">
                 <input
                   type="radio"
                   name="category"
@@ -143,7 +142,6 @@ onMounted(() => {
                   value="kg"
                   v-model="weight_choice"
                 />
-                <span class="bubble personal"></span>
                 <span class="ml-1">kg</span>
               </label>
             </span>
