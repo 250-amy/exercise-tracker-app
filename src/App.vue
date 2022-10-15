@@ -83,7 +83,7 @@ onMounted(() => {
               />
             </div>
           </div>
-          <div class="inline-flex mb-4 justify-between space-x-2 w-full">
+          <div class="inline-flex mb-4 justify-between space-x-2 w-auto">
             <div class="relative">
               <p class="input-label flex content-start"># of sets:</p>
               <input
@@ -161,14 +161,14 @@ onMounted(() => {
       </section>
     </div>
 
-    <section class="exercise_list mt-8">
+    <section class="exercise_list mt-8 w-auto">
       <h2 class="subtitle text-left font-medium">Exercise List</h2>
       <p class="mb-4 flex text-sm text-left content-start w-auto">
         These fields are editable. You can change the information that you have
         submitted at any time.
       </p>
 
-      <div class="list" id="exercise_list">
+      <div class="list w-auto" id="exercise_list">
         <div
           v-for="exercise in exercises_asc"
           v-bind:key="exercise.id"
