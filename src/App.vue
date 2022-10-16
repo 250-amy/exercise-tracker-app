@@ -58,7 +58,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="app bg-gray-800 shadow-xl rounded-2xl px-8 py-6 sm:px-32 lg:px-64">
+  <main class="app bg-gray-800 shadow-xl rounded-2xl px-12 py-6 sm:px-32 lg:px-64">
     <section class="greeting mb-6">
       <h1 class="title font-bold uppercase tracking-wide mb-1">Exercise Tracker</h1>
       <p class="text-sm">Lift weights, log, repeat 💪</p>
@@ -160,7 +160,7 @@ onMounted(() => {
       </section>
     </div>
 
-    <section class="exercise_list mt-8 w-auto">
+    <section class="exercise_list mt-8">
       <h2 class="subtitle text-left font-medium">Exercise List</h2>
       <p class="mb-4 flex text-sm text-left content-start w-auto">
         Your inputted exercises will appear here. You can edit the information at any time; just click on the text that you want to change. 
@@ -176,11 +176,11 @@ onMounted(() => {
             <div class="mb-4">
               <div
                 id="list"
-                class="flex flex-col mb-2 w-auto border-gray-300 bg-white shadow-sm"
+                class="flex flex-col mb-2 border-gray-300 bg-white shadow-sm"
               >
                 <input
                   type="text"
-                  class="font-semibold text-xl text-gray-800 uppercase tracking-wide bg-transparent mx-3 pb-3"
+                  class="font-semibold text-sm sm:text-xl text-gray-800 uppercase tracking-wide bg-transparent mx-3 pb-3"
                   v-model="exercise.content"
                 />
                 <div
