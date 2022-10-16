@@ -166,7 +166,7 @@ onMounted(() => {
         Your inputted exercises will appear here. You can edit the information at any time; just click on the text that you want to change. 
       </p>
     <div class="flex justify-center">
-      <div class="w-9/12 sm:w-full" id="exercise_list">
+      <div class="w-auto sm:w-full" id="exercise_list">
         <div
           v-for="exercise in exercises_asc"
           v-bind:key="exercise.id"
